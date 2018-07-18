@@ -1,0 +1,22 @@
+<view class="swipe_container" wx:for="{{infoData}}" wx:key="{{index}}">
+	<view class="swipe_item  {{classIndex == index ? 'move' : ''}} "
+		  data-index="{{index}}" 
+		  bindtouchstart="startFn" 
+		  bindtouchmove="moveFn" 
+		  bindtouchend="endFn"
+		  bindtap="checkFn"
+		  style="transform:translate3d({{ activeIndex === index ? moveX : 0}}px,0,0)" 
+	>
+		<view class="check_box  {{item.check ? 'active' : ''}} "></view>
+		<view class="info_box">{{item.title}}
+			<text>购买时间：{{item.time}}</text>
+		</view>
+	</view>
+	<view class="tool_box  {{classIndex == index ? 'move' : ''}}" 
+		  data-index="{{index}}"
+		  style="transform:translate3d({{ activeIndex === index ? btnMoveX : 80}}px,0,0)" 
+		  bindtap="delFn"
+	>
+		<text>删除</text>
+	</view>
+</view>

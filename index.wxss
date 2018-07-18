@@ -1,0 +1,15 @@
+page { background: #f0f0f0; }
+.swipe_container { background: #fff; position: relative; overflow: hidden; padding: 20rpx; margin-top: 20rpx; }
+.swipe_item { display: flex; position: relative; z-index: 10; transition: all .4s ease; }
+.swipe_item.move { transition: all 0s ease }
+.swipe_item:after,
+.tool_box:after { content: ''; display: block; width: 100%; height: 100%; position: absolute; left: 0; top: 0px; z-index: 8; }
+.info_box { font-size: 28rpx; font-weight: bold; color: #333; padding: 0 18rpx; }
+.info_box text { font-size: 24rpx; font-weight: normal; color: #999; display: block; padding-top: 8rpx; }
+.check_box { align-self: center; flex-basis: 35px; min-width: 35px; height: 80rpx; position: relative; display: flex; }
+.check_box:after { content: ''; display: block; margin: 0 auto; position: relative; box-sizing: border-box; width: 21px; height: 21px; position: relative; border: 1px solid #dbdbdb; border-radius: 50%; align-self: center; }
+.check_box.active:after { content: ''; background: red; border: 1px solid red; }
+.check_box.active:before { content: ''; display: block; width: 0; height: 0; border-color: transparent #fff #fff transparent; border-style: solid; border-width: 12px 2px 2px 5px; transform: rotate(45deg); position: absolute; left: 14px; top: 11px; z-index: 10; }
+.tool_box { position: absolute; right: 0; top: 0px; height: 100%; font-size: 30rpx; color: #fff; background: red; font-weight: bold; line-height: 2; z-index: 12; display: flex; transform: translate3d(80px, 0, 0); width: 80px; text-align: center; transition: all .4s ease; }
+.tool_box.move { transition: all 0s ease }
+.tool_box text { display: block; margin: 0 auto; padding: 0 0rpx; align-self: center; letter-spacing: 3px; }
