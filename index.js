@@ -24,8 +24,7 @@ Page({
         moveX : 0,
         btnMoveX : 80,  //初始值
         classIndex : null,  //设置当前class
-        activeIndex : null, //当前触碰的索引
-        checkIndex : null
+        activeIndex : null //当前触碰的索引
     },
     delFn(e){//删除例子
         wx.showModal({
